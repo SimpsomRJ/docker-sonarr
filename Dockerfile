@@ -1,7 +1,7 @@
 FROM linuxserver/sonarr:latest
 RUN apk update && \
       apk add -U --no-cache \
-          mkvtoolnix && \
+          mkvtoolnix ffmpeg jq && \
       apk --no-cache upgrade
 RUN mkdir /scripts
 COPY scripts/ /scripts
